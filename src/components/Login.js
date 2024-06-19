@@ -1,21 +1,20 @@
 import Header from "./Header";
-import { useRef, useState } from "react";
-import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import { useRef, useState } from "react";
+import { checkValidData } from "../utils/validate";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { BG_IMAGE } from "../utils/constant";
+import { USER_AVATAR, BG_URL } from "../utils/constant";
 
 const Login = () => {
   const [isSignInForm, setSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   const name = useRef(null);
@@ -26,27 +25,22 @@ const Login = () => {
   // console.log(name.current.value)
   const handleButtonClick = () => {
     console.log(email.current.value, password.current.value);
-    const message = checkValidData(
-      email.current.value,
-      password.current.value,
-      name.current.value
-    );
+    const message = checkValidData(email.current.value, password.current.value);
     setErrorMessage(message);
-    if (message) return;
+    if (message) return; //if message(error msg) then return Message
 
+    //Sign up Logic
     if (!isSignInForm) {
-      //Sign up Logic
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
         password.current.value
       )
         .then((userCredential) => {
-          // Signed up
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://avatars.githubusercontent.com/u/68728529?v=4",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
@@ -59,7 +53,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -74,6 +67,7 @@ const Login = () => {
         });
     } else {
       //Sign in Logic
+
       signInWithEmailAndPassword(
         auth,
         email.current.value,
@@ -81,10 +75,9 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
+
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -103,7 +96,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BG_IMAGE} alt="Background" />
+        <img src={BG_URL} alt="Background" />
       </div>
       <form
         className="w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
@@ -116,7 +109,7 @@ const Login = () => {
         {!isSignInForm && (
           <input
             ref={name}
-            type="name"
+            type="text"
             placeholder="Full Name"
             className="p-4 my-6 w-full bg-gray-700"
           />
@@ -139,7 +132,7 @@ const Login = () => {
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
-        </button>{" "}
+        </button>
         <p className="p-4 text-lg " onClick={toggleSignInForm}>
           {isSignInForm ? (
             <>
@@ -163,3 +156,5 @@ const Login = () => {
 };
 
 export default Login;
+
+/////////////////////////////////////////////////////////////////////////////////////
