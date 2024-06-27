@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constant";
 import { addTrailerVideo } from "../utils/moviesSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const useMovieTrailer = (movieId) => {
   const dispatch = useDispatch();
+
+  // Doing for Memoization
+  const trailerVideo = useSelector((store) => store.movies.trailerVideo);
+
   // fetch trailer video & updating the store with trailer video data
   const getMovieVideo = async () => {
     const data = await fetch(
@@ -14,8 +18,6 @@ const useMovieTrailer = (movieId) => {
       API_OPTIONS
     );
     const json = await data.json();
-    // console.log(json);
-
     const filerTrailerData = json.results.filter(
       (video) => video.type === "Trailer"
     );
@@ -29,7 +31,9 @@ const useMovieTrailer = (movieId) => {
     dispatch(addTrailerVideo(trailer));
   };
   useEffect(() => {
-    getMovieVideo();
+    // call only when trailerVideo is not present(memoization)
+    // if (!trailerVideo) getMovieVideo();
+    !trailerVideo && getMovieVideo();
   }, []);
 };
 
