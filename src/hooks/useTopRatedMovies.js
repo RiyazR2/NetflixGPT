@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTopRatedMovies } from "../utils/moviesSlice";
 
 // Fetching TopRatedMovies from TMDB and putting it into the Store
 const useTopRatedMovies = () => {
   const dispatch = useDispatch();
+
+  // Doing for Memoization
+  const topRatedMovies = useSelector((store) => store.movies.topRatedMovies);
 
   const getTopRatedMovies = async () => {
     const data = await fetch(
@@ -18,7 +21,9 @@ const useTopRatedMovies = () => {
   };
 
   useEffect(() => {
-    getTopRatedMovies();
+    // call only when topRatedMovies is not present(memoization)
+    // if (!topRatedMovies) getTopRatedMovies();
+    !topRatedMovies && getTopRatedMovies();
   }, []);
 };
 
