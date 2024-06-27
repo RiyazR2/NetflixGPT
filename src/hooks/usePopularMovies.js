@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../utils/constant";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addPopularMovies } from "../utils/moviesSlice";
 
 // Fetching Popular Movies from TMDB and putting it into the Store
 const usePopularMovies = () => {
   const dispatch = useDispatch();
+
+  // Doing for Memoization
+  const popularMovies = useSelector((store) => store.movies.popularMovies);
 
   const getPopularMovies = async () => {
     const data = await fetch(
@@ -18,7 +21,10 @@ const usePopularMovies = () => {
   };
 
   useEffect(() => {
-    getPopularMovies();
+    // call only when popularMovies is not present(memoization)
+    // if (!popularMovies) getPopularMovies();
+
+    !popularMovies && getPopularMovies();
   }, []);
 };
 
