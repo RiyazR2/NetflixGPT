@@ -96,10 +96,14 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src={BG_IMG_URL} alt="Background" />
+        <img
+          className="h-screen object-cover w-screen aspect-video"
+          src={BG_IMG_URL}
+          alt="Background"
+        />
       </div>
       <form
-        className="w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
+        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl py-4">
@@ -111,29 +115,29 @@ const Login = () => {
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="p-4 my-6 w-full bg-gray-700"
+            className="p-4 my-4 w-full bg-gray-700"
           />
         )}
         <input
           ref={email}
           type="email"
           placeholder="Email Adress"
-          className="p-4   my-6 w-full bg-gray-700"
+          className="p-4 my-4 w-full bg-gray-700"
         />
         <input
           ref={password}
           type="password"
           placeholder="password"
-          className="p-4 my-6 w-full bg-gray-700"
+          className="p-4 my-4 w-full bg-gray-700"
         />
-        <p className="text-red-500 text-lg font-bold">{errorMessage}</p>
+        <p className="text-red-500 text-lg font-bold py-2">{errorMessage}</p>
         <button
-          className="p-4 my-6 bg-red-700 w-full rounded-lg font-bold"
+          className="p-4 my-6 bg-red-700 w-full rounded-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="p-4 text-lg " onClick={toggleSignInForm}>
+        <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm ? (
             <>
               New to Netflix?
