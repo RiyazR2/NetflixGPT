@@ -25,9 +25,13 @@ const Login = () => {
   // console.log(name.current.value)
   const handleButtonClick = () => {
     // console.log(email.current.value, password.current.value);
-    const message = checkValidData(email.current.value, password.current.value);
+    const message = checkValidData(
+      email.current.value,
+      password.current.value,
+      name.current.value
+    );
     setErrorMessage(message);
-    if (message) return; //if message(error msg) then return Message
+    if (message) return; //if message->(error msg) then return Message
 
     //Sign up Logic
     if (!isSignInForm) {
@@ -103,7 +107,7 @@ const Login = () => {
         />
       </div>
       <form
-        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
+        className="w-full md:w-3/12 absolute p-12 bg-black my-28 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="font-bold text-3xl py-4">
@@ -130,14 +134,14 @@ const Login = () => {
           placeholder="password"
           className="p-4 my-4 w-full bg-gray-700"
         />
-        <p className="text-red-500 text-lg font-bold py-2">{errorMessage}</p>
+        <p className="text-red-500 text-lg font-semibold ">{errorMessage}</p>
         <button
           className="p-4 my-6 bg-red-700 w-full rounded-lg"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
+        <p className="py-1 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm ? (
             <>
               New to Netflix?
