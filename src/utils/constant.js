@@ -11,6 +11,7 @@ export const BG_IMG_URL =
 export const GIT_USER_AVATAR =
   "https://avatars.githubusercontent.com/u/68728529?v=4";
 
+// Your Personal => API Read Access Token
 export const API_OPTIONS = {
   method: "GET",
   headers: {
