@@ -59,7 +59,7 @@ const CardInfo = () => {
                     src={
                       member.profile_path
                         ? `https://image.tmdb.org/t/p/w500${member.profile_path}`
-                        : "https://wallpapercave.com/wp/wp9566427.jpg" // Default placeholder image
+                        : "https://cdn.head-fi.org/assets/classifieds/hf-classifieds_no-image-available_2.jpg" // Default placeholder image
                     }
                     alt={member.name}
                     className="w-full object-cover rounded-t-lg"
@@ -88,7 +88,7 @@ const CardInfo = () => {
                     src={
                       member.profile_path
                         ? `https://image.tmdb.org/t/p/w500${member.profile_path}`
-                        : "https://wallpapercave.com/wp/wp9566427.jpg" // Default placeholder image
+                        : "https://cdn.head-fi.org/assets/classifieds/hf-classifieds_no-image-available_2.jpg" // Default placeholder image
                     }
                     alt={member.name}
                     className="w-full h-64 object-cover rounded-t-lg"
