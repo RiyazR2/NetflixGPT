@@ -9,17 +9,16 @@ const CardInfo = () => {
   const [crew, setCrew] = useState([]);
   const navigate = useNavigate();
 
-  const fetchData = async () => {
-    const data = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}/credits`,
-      API_OPTIONS
-    );
-    const json = await data.json();
-    setCast(json.cast);
-    setCrew(json.crew);
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch(
+        `https://api.themoviedb.org/3/movie/${id}/credits`,
+        API_OPTIONS
+      );
+      const json = await data.json();
+      setCast(json.cast);
+      setCrew(json.crew);
+    };
     fetchData();
   }, [id]);
 
