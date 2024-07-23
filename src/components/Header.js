@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { toggleGptSearchView } from "../utils/gptSlice";
+import { resetGptState, toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
@@ -50,10 +50,13 @@ const Header = () => {
     return () => unsubscribe(); // it will Remove onAuthStateChange from our Browsers when our component unload/unmount
   }, []);
 
-  // Toggle GptSearch
+  // Toggle GptSearch and clear Search Results
   const handleGptSearchClick = () => {
-    // console.log("GPT Button Clicked");
-    dispatch(toggleGptSearchView());
+    if (showGptSearch) {
+      dispatch(resetGptState());
+    } else {
+      dispatch(toggleGptSearchView());
+    }
   };
 
   const handleLanguageChange = (e) => {
@@ -84,7 +87,7 @@ const Header = () => {
             </select>
           )}
           <button
-            className="py-2 px-4 mx-4 bg-purple-800 text-white rounded-lg"
+            className=" py-0 px-3 mx-4 bg-purple-800 text-white rounded-lg"
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "Home" : "GPT Search"}
@@ -97,7 +100,10 @@ const Header = () => {
           <p className="hidden md:block font-bold text-white p-4">
             {user?.displayName}
           </p>
-          <button className="font-bold text-white" onClick={handleSignOut}>
+          <button
+            className="font-bold text-white text-sm"
+            onClick={handleSignOut}
+          >
             (Sign Out)
           </button>
         </div>
