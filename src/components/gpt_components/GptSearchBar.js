@@ -27,7 +27,7 @@ const GptSearchBar = () => {
   searchMovieTMDB();
 
   const handleGptSearchClick = async () => {
-    console.log(searchText.current.value);
+    // console.log(searchText.current.value);
 
     const gptQuery =
       "Act as Movie Recommendation System and Suggest some Movies for the Query : " +
@@ -42,11 +42,11 @@ const GptSearchBar = () => {
 
     if (!gptResults.choices) {
       // Handle Error
-      console.log("The Movies are not available!!!!!!!!!!!!!!!!!!!!!!!!");
+      // console.log("The Movies are not available!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
     const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
-    console.log("gptResults.choices GetMovies:", gptMovies);
+    // console.log("gptResults.choices GetMovies:", gptMovies);
     // console.log("gptResults.choices GetMovies:", gptMovies);
 
     // for each movie we will search TMDB-API
@@ -55,7 +55,7 @@ const GptSearchBar = () => {
 
     //Promise.all() it takes array of promises it will only finish once all these 5 promises are resolved
     const tmdbResults = await Promise.all(promiseArray);
-    console.log("tmdbResults:", tmdbResults);
+    // console.log("tmdbResults:", tmdbResults);
 
     dispatch(
       addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })

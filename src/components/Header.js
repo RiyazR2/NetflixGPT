@@ -48,7 +48,7 @@ const Header = () => {
 
     //unsubscribe when component unmount
     return () => unsubscribe(); // it will Remove onAuthStateChange from our Browsers when our component unload/unmount
-  }, []);
+  }, [dispatch, navigate]);
 
   // Toggle GptSearch and clear Search Results
   const handleGptSearchClick = () => {

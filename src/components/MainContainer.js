@@ -10,12 +10,12 @@ const MainContainer = React.memo(() => {
   if (!movies) return; // AKA Early Return
 
   const mainMovie = movies[0];
-  console.log("Main Movie", mainMovie);
+  // console.log("Main Movie", mainMovie);
   const { original_title, overview, id } = mainMovie;
 
   return (
     <div className="pt-[30%] md:pt-0 bg-black ">
-      {console.log("MainContainer")}
+      {/* {console.log("MainContainer")} */}
       <VideoTitle title={original_title} overview={overview} />
       <BackgroundVideo movieId={id} />
     </div>
