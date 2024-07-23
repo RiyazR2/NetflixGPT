@@ -5,8 +5,8 @@ const MovieList = ({ title, movies }) => {
   // console.log("NowPlayingMovies", movies);
   return (
     <div className="px-6 ">
-      <h1 className="text-lg md:text-3xl py-4 text-white">
-        {title} and it's name related Movies
+      <h1 className="text-[15px] font-semibold md:text-3xl py-4 text-white">
+        {title}
       </h1>
 
       {/* to hide scrollbar-none  */}
@@ -16,7 +16,7 @@ const MovieList = ({ title, movies }) => {
             /* <Link key={movie.id} to={"/cardinfo/"+movie?.id}></Link> */
             /* { <Link key={movie.id} to={"/cardinfo/" + movie?.id}>
             </Link> }*/
-            <a href={"/cardinfo/" + movie?.id}>
+            <a key={movie.id} href={"/cardinfo/" + movie?.id}>
               <MovieCard posterPath={movie.poster_path} />
             </a>
           ))}
