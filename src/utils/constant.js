@@ -17,17 +17,13 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
 
-    // Dummy
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMjViOTMwYmVmZGFjNWM2MTNjODE1ODBiMGY5NmEzNSIsInN1YiI6IjY2NzFkNjE3Nzc4M2ExNmQ5MmYzMDE0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._-JOsMWx6vKF7I2VgPq1zKW1_ujQX7Sl4niRqkGSLfk",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
 export const TMDB_IMG_CDN_URL = "https://image.tmdb.org/t/p/w780/";
 
-//Dummy
-export const OPENAI_KEY =
-  "sk-None-YxqOsKm7NWvl3kH3X9SnT3BlbkFJqoxvyr3VeArFwIekwJ8T";
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
