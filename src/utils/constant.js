@@ -27,7 +27,7 @@ export const TMDB_IMG_CDN_URL = "https://image.tmdb.org/t/p/w780/";
 
 //Dummy
 export const OPENAI_KEY =
-  "sk-proj-SG4AyYUBDEqfZtAdeBnXT3BlbkFJCebyh6mUcZVvT0DS4Smo";
+  "sk-None-YxqOsKm7NWvl3kH3X9SnT3BlbkFJqoxvyr3VeArFwIekwJ8T";
 
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
