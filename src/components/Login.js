@@ -100,17 +100,23 @@ const Login = () => {
   return (
     <div>
       <Header />
+
       <div className="absolute">
         <img
           className="h-screen object-cover w-screen aspect-video"
           src={BG_IMG_URL}
           alt="Background"
         />
+        <div className="absolute text-white top-10 left-0 right-0  flex items-center justify-center text-2xl z-10"></div>
       </div>
+
       <form
-        className="w-11/12 md:w-3/12 absolute p-12 bg-black my-28 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
+        className="w-11/12 md:w-3/12 absolute p-8 bg-black my-28 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
         onSubmit={(e) => e.preventDefault()}
       >
+        <p className="text-sm">Dummy Credentials</p>
+        <p>{`user1@gmail.com User1@1234`}</p>
+
         <h1 className="font-bold text-2xl md:text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
