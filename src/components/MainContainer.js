@@ -9,7 +9,7 @@ const MainContainer = React.memo(() => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
   if (!movies) return; // AKA Early Return
 
-  const mainMovie = movies[0];
+  const mainMovie = movies[3];
   // console.log("Main Movie", mainMovie);
   const { original_title, overview, id } = mainMovie;
 
