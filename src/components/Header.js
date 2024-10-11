@@ -25,6 +25,7 @@ const Header = () => {
       });
   };
 
+  // onAuthStateChange event moved here from body component because header is always there for any component
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       // console.log("onAuthStateChanged => user info", user);
