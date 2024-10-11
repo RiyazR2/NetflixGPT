@@ -101,9 +101,9 @@ const Login = () => {
     <div>
       <Header />
 
-      <div className="absolute">
+      <div className="absolute ">
         <img
-          className="h-screen object-cover w-screen aspect-video"
+          className="h-screen fixed object-cover w-screen aspect-video"
           src={BG_IMG_URL}
           alt="Background"
         />
