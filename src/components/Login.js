@@ -114,7 +114,7 @@ const Login = () => {
         className="w-11/12 md:w-3/12 absolute p-8 bg-black my-28 mx-auto right-0 left-0 text-white  rounded-lg bg-opacity-80"
         onSubmit={(e) => e.preventDefault()}
       >
-        <p className="text-sm">Dummy Credentials</p>
+        <p className="text-sm">Dummy CredentialsSSSSS</p>
         <p>{`user1@gmail.com User1@1234`}</p>
 
         <h1 className="font-bold text-2xl md:text-3xl py-4">
