@@ -16,7 +16,7 @@ const GptSearchBar = () => {
       "https://api.themoviedb.org/3/search/movie?query=" +
         movie +
         "&include_adult=false&language=en-US&page=1",
-      API_OPTIONS
+      API_OPTIONS,
     );
     const json = await data.json();
     // console.log("json.results:", json);
@@ -58,29 +58,49 @@ const GptSearchBar = () => {
     // console.log("tmdbResults:", tmdbResults);
 
     dispatch(
-      addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults })
+      addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults }),
     );
   };
 
   return (
-    <div className="pt-[42%]  md:p-[10%] flex justify-center ">
-      <form
-        className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg"
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <input
-          ref={searchText}
-          className="p-4 m-4 md:m-4 col-span-9 text-xs md:text-lg rounded-lg"
-          type="text"
-          placeholder={lang[langKey].gptSearchPlaceholder}
-        />
-        <button
-          className="sm:py-2 pl-0 py-0 m-4 col-span-3 sm:px-1 md:px-4 bg-red-700 text-white rounded-lg  "
-          onClick={handleGptSearchClick}
+    <div className="pt-[35%] md:pt-[10%] flex justify-center px-4">
+      <div className="w-full md:w-2/3 lg:w-1/2">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+            🎬 GPT Movie Search
+          </h2>
+          <p className="text-gray-300 text-sm md:text-base">
+            Ask AI to recommend movies based on your preferences
+          </p>
+        </div>
+
+        <form
+          className="bg-black bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-2xl border border-gray-700"
+          onSubmit={(e) => e.preventDefault()}
         >
-          {lang[langKey].search}
-        </button>
-      </form>
+          <div className="flex flex-col md:flex-row gap-3">
+            <input
+              ref={searchText}
+              className="flex-1 p-4 bg-gray-800 bg-opacity-80 text-white placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition text-sm md:text-base"
+              type="text"
+              placeholder={lang[langKey].gptSearchPlaceholder}
+            />
+            <button
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white font-semibold rounded-lg transition duration-200 transform hover:scale-105 shadow-lg"
+              onClick={handleGptSearchClick}
+            >
+              {lang[langKey].search}
+            </button>
+          </div>
+
+          <div className="mt-4 text-gray-400 text-xs md:text-sm">
+            <p>
+              💡 Try: "Suggest action movies like Mission Impossible" or
+              "Romantic comedies for date night"
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
