@@ -128,11 +128,13 @@ Output: {genres: ["sci-fi"], year_min: 2015, year_max: 2020, rating_min: 7}
 Result: Precise TMDB Discover API query
 ```
 
-### 3. Semantic Similarity
+### 3. Similar Movies Discovery
 
-- 384-dimensional vector embeddings
-- Cosine similarity matching
-- Finds movies with similar themes/plots
+Using TMDB's Similar Movies API:
+
+- Finds related movies based on TMDB's similarity algorithm
+- Displays cast, crew, and genre-based recommendations
+- One-click discovery of movies with similar themes
 
 ---
 
@@ -154,10 +156,10 @@ src/
 
 ## 📈 Performance
 
-- **Filter Accuracy**: 95% (vs 60% keyword-based)
-- **Search Latency**: <1s (TMDB), 5-10s (embeddings)
-- **Languages Supported**: 6
-- **Embedding Dims**: 384
+- **AI Response Time**: ~2-3s for GPT-3.5 recommendations
+- **TMDB API Latency**: <1s for movie data
+- **Languages Supported**: 6 (i18n UI translation)
+- **Movie Database**: 1000+ movies from TMDB
 
 ---
 
@@ -172,10 +174,10 @@ src/
 
 ## 🙏 Acknowledgments
 
-- [TMDB](https://www.themoviedb.org/) - Movie database
-- [Groq](https://groq.com/) - LLM inference
-- [HuggingFace](https://huggingface.co/) - Transformers
-- [Firebase](https://firebase.google.com/) - Authentication
+- [TMDB](https://www.themoviedb.org/) - Movie database and API
+- [OpenAI](https://openai.com/) - GPT-3.5 Turbo for AI recommendations
+- [Firebase](https://firebase.google.com/) - Authentication service
+- [Netlify](https://netlify.com/) - Deployment platform
 
 ---
 
