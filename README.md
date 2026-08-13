@@ -1,6 +1,6 @@
 # 🎬 NetflixGPT - AI-Powered Movie Discovery Platform
 
-An intelligent movie recommendation system featuring semantic search, conversational AI, and LLM-based query parsing for personalized movie discovery.
+An intelligent movie recommendation platform powered by OpenAI GPT-3.5, featuring conversational AI, natural language query parsing, and smart multi-API architecture for personalized movie discovery.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://gptflixr2.netlify.app/)
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
@@ -20,7 +20,7 @@ An intelligent movie recommendation system featuring semantic search, conversati
 
 ## 📖 Overview
 
-NetflixGPT is an intelligent movie discovery platform that combines React with advanced AI features including RAG-based similarity search, LLM function calling for structured query parsing, and conversational memory for multi-turn interactions.
+NetflixGPT is an intelligent movie discovery platform that combines React with advanced AI features including OpenAI GPT-3.5 integration, LLM function calling for structured query parsing, and conversational memory for multi-turn interactions.
 
 ---
 
@@ -28,17 +28,17 @@ NetflixGPT is an intelligent movie discovery platform that combines React with a
 
 ### 🤖 AI-Powered Search
 
-- **Conversational Memory**: Multi-turn chat retaining context across queries
-- **Structured Search**: Natural language to TMDB filter conversion (95% accuracy)
-- **Semantic Similarity**: Vector embeddings (384-dim) with cosine similarity
-- **Mood-Based Recommendations**: Emotional state detection with intelligent genre mapping
+- **Conversational Memory**: Multi-turn chat retaining context across queries using Redux state management
+- **Structured Search**: LLM function calling for natural language to structured filter conversion (95% accuracy)
+- **Intelligent Recommendations**: TMDB similarity engine enhanced with LLM-based preference analysis
+- **Mood-Based Discovery**: Emotional state detection with intelligent genre mapping using GPT-3.5
 
 ### 🎯 Core Functionality
 
 - **Real-time Movie Data**: TMDB API integration with 1000+ movies
 - **Bollywood Movies Support**: OMDb API integration for Indian cinema
-- **Similar Movies Engine**: Dual-mode (TMDB API + HuggingFace embeddings)
-- **Advanced Filtering**: Automatic extraction of genre, year range, rating thresholds
+- **Similar Movies Engine**: TMDB similarity API with intelligent filtering
+- **Advanced Filtering**: LLM-powered extraction of genre, year range, rating thresholds from natural language
 - **Multi-language Support**: i18n implementation (English, Hindi, Marathi, Telugu, Tamil, Urdu)
 
 ### 🎨 User Experience
@@ -64,8 +64,7 @@ NetflixGPT is an intelligent movie discovery platform that combines React with a
 - Firebase Authentication
 - TMDB API (Movie database)
 - OMDb API (Bollywood/Indian movies)
-- Groq/OpenAI API (LLM integration)
-- HuggingFace Transformers (sentence-transformers/all-MiniLM-L6-v2)
+- OpenAI API (GPT-3.5 for LLM integration)
 
 **Tools:**
 
