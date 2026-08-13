@@ -1,7 +1,27 @@
 {
   "name": "netflix-gpt",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "AI-powered movie discovery platform with OpenAI GPT-3.5 integration, featuring conversational AI, natural language query parsing, and hybrid API architecture",
+  "author": "Riyaz Pathan",
+  "keywords": [
+    "react",
+    "openai",
+    "gpt",
+    "ai",
+    "movie-discovery",
+    "llm",
+    "natural-language-processing",
+    "redux",
+    "firebase",
+    "tmdb",
+    "tailwindcss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RiyazR2/NetflixGPT"
+  },
+  "homepage": "https://gptflixr2.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
