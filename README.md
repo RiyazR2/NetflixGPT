@@ -1,14 +1,13 @@
-# 🎬 NetflixGPT - AI-Powered Movie Discovery Platform
+# 🎬 MovieFinder - AI-Powered Movie Discovery Platform
 
 An intelligent movie recommendation platform powered by OpenAI GPT-3.5, featuring conversational AI, natural language query parsing, and smart multi-API architecture for personalized movie discovery.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://gptflixr2.netlify.app/)
 [![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
 [![Redux](https://img.shields.io/badge/Redux-Toolkit-purple)](https://redux-toolkit.js.org/)
 
 ## 🌐 Live Demo
 
-🔗 [https://gptflixr2.netlify.app/](https://gptflixr2.netlify.app/)
+🔗 [https://moviefinder-wine.vercel.app](https://moviefinder-wine.vercel.app)
 
 **Quick Test Login:**
 
@@ -20,7 +19,7 @@ An intelligent movie recommendation platform powered by OpenAI GPT-3.5, featurin
 
 ## 📖 Overview
 
-NetflixGPT is an intelligent movie discovery platform that combines React with advanced AI features including OpenAI GPT-3.5 integration, LLM function calling for structured query parsing, and conversational memory for multi-turn interactions.
+MovieFinder is an intelligent movie discovery platform that combines React with advanced AI features including OpenAI GPT-3.5 integration, LLM function calling for structured query parsing, and conversational memory for multi-turn interactions.
 
 ---
 
@@ -69,14 +68,14 @@ NetflixGPT is an intelligent movie discovery platform that combines React with a
 **Tools:**
 
 - Git & GitHub for version control
-- Netlify for deployment
+- Vercel for deployment
 - Environment variables for API security
 
 ---
 
 ## 📋 Installation & Setup
 
-To set up and run NetflixGPT locally:
+To set up and run MovieFinder locally:
 
 1. **Clone the Repository:**
 
@@ -177,7 +176,7 @@ src/
 - [TMDB](https://www.themoviedb.org/) - Movie database and API
 - [OpenAI](https://openai.com/) - GPT-3.5 Turbo for AI recommendations
 - [Firebase](https://firebase.google.com/) - Authentication service
-- [Netlify](https://netlify.com/) - Deployment platform
+- [Vercel](https://vercel.com/) - Deployment platform
 
 ---
 

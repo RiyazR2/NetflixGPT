@@ -9,11 +9,13 @@ import { useRef, useState } from "react";
 import { checkValidData } from "../utils/validate";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { USER_AVATAR, BG_IMG_URL } from "../utils/constant";
+import { getAvatarUrl } from "../utils/constant";
+import useBackgroundImage from "../hooks/useBackgroundImage";
 
 const Login = () => {
   const [isSignInForm, setSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const bgImage = useBackgroundImage();
 
   const dispatch = useDispatch();
 
@@ -46,7 +48,7 @@ const Login = () => {
           // As Soon As new user Successfuly register then updating the profile with name and photoURL
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: USER_AVATAR,
+            photoURL: getAvatarUrl(name.current.value),
           })
             .then(() => {
               // Profile updated!
@@ -102,11 +104,15 @@ const Login = () => {
       <Header />
 
       <div className="absolute ">
-        <img
-          className="h-screen fixed object-cover w-screen aspect-video"
-          src={BG_IMG_URL}
-          alt="Background"
-        />
+        {bgImage ? (
+          <img
+            className="h-screen fixed object-cover w-screen aspect-video"
+            src={bgImage}
+            alt="Background"
+          />
+        ) : (
+          <div className="h-screen fixed w-screen aspect-video bg-gradient-to-b from-gray-900 via-black to-black" />
+        )}
         <div className="absolute text-white top-10 left-0 right-0  flex items-center justify-center text-2xl z-10"></div>
       </div>
 
@@ -229,7 +235,7 @@ const Login = () => {
           >
             {isSignInForm ? (
               <span className="flex items-center justify-center gap-1">
-                New to Netflix?
+                New here?
                 <span className="text-white font-semibold group-hover:underline">
                   Sign up now
                 </span>

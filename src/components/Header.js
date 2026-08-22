@@ -2,7 +2,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
+import { APP_LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
 import { resetGptState, toggleGptSearchView } from "../utils/gptSlice";
@@ -69,8 +69,8 @@ const Header = () => {
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-50 flex flex-col md:flex-row justify-between">
       <img
         className="w-44 mx-auto md:mx-0"
-        src={NETFLIX_LOGO}
-        alt="NETFLIX_LOGO"
+        src={APP_LOGO}
+        alt="MovieFinder Logo"
       />
 
       {/* only show when user is logged in */}

@@ -7,7 +7,7 @@ const lang = {
 
     // AI Search Page
     search: "Search",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle: "Discover your next favorite movie with AI",
     gptSearchPlaceholder:
       "e.g., I'm feeling happy, romantic movies, action thriller...",
@@ -29,9 +29,9 @@ const lang = {
     conversationHistory: "Conversation History",
     clearChat: "Clear",
     you: "You",
-    ai: "NetflixGPT",
+    ai: "MovieFinder AI",
     chatTip:
-      "NetflixGPT remembers your conversation. Try refining: 'older ones', 'more recent', etc.",
+      "MovieFinder AI remembers your conversation. Try refining: 'older ones', 'more recent', etc.",
 
     // Login Page
     signIn: "Sign In",
@@ -39,7 +39,7 @@ const lang = {
     email: "Email Address",
     password: "Password",
     fullName: "Full Name",
-    newUser: "New to Netflix?",
+    newUser: "New here?",
     existingUser: "Already registered?",
     signUpNow: "Sign up now",
     signInNow: "Sign in now",
@@ -52,7 +52,7 @@ const lang = {
 
     // AI Search Page
     search: "खोज",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle: "AI के साथ अपनी अगली पसंदीदा फिल्म खोजें",
     gptSearchPlaceholder:
       "जैसे: मैं खुश महसूस कर रहा हूं, रोमांटिक फिल्में, एक्शन थ्रिलर...",
@@ -74,9 +74,9 @@ const lang = {
     conversationHistory: "बातचीत का इतिहास",
     clearChat: "साफ़ करें",
     you: "आप",
-    ai: "NetflixGPT",
+    ai: "MovieFinder AI",
     chatTip:
-      "NetflixGPT आपकी बातचीत याद रखता है। बेहतर बनाएं: 'पुरानी', 'नई', आदि।",
+      "MovieFinder AI आपकी बातचीत याद रखता है। बेहतर बनाएं: 'पुरानी', 'नई', आदि।",
 
     // Login Page
     signIn: "साइन इन करें",
@@ -84,7 +84,7 @@ const lang = {
     email: "ईमेल पता",
     password: "पासवर्ड",
     fullName: "पूरा नाम",
-    newUser: "Netflix पर नए हैं?",
+    newUser: "यहाँ नए हैं?",
     existingUser: "पहले से पंजीकृत हैं?",
     signUpNow: "अभी साइन अप करें",
     signInNow: "अभी साइन इन करें",
@@ -97,7 +97,7 @@ const lang = {
 
     // AI Search Page
     search: "शोधा",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle: "AI सह तुमचा पुढील आवडता चित्रपट शोधा",
     gptSearchPlaceholder:
       "उदा: मला आनंदी वाटतंय, रोमँटिक चित्रपट, अॅक्शन थ्रिलर...",
@@ -119,8 +119,9 @@ const lang = {
     conversationHistory: "संभाषणाचा इतिहास",
     clearChat: "साफ करा",
     you: "तुम्ही",
-    ai: "NetflixGPT",
-    chatTip: "NetflixGPT तुमचे संभाषण लक्षात ठेवते। सुधारा: 'जुने', 'नवीन', इ.",
+    ai: "MovieFinder AI",
+    chatTip:
+      "MovieFinder AI तुमचे संभाषण लक्षात ठेवते। सुधारा: 'जुने', 'नवीन', इ.",
 
     // Login Page
     signIn: "साइन इन करा",
@@ -128,7 +129,7 @@ const lang = {
     email: "ईमेल पत्ता",
     password: "पासवर्ड",
     fullName: "पूर्ण नाव",
-    newUser: "Netflix वर नवीन आहात?",
+    newUser: "इथे नवीन आहात?",
     existingUser: "आधीच नोंदणीकृत आहात?",
     signUpNow: "आता साइन अप करा",
     signInNow: "आता साइन इन करा",
@@ -141,7 +142,7 @@ const lang = {
 
     // AI Search Page
     search: "శోధ",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle: "AI తో మీ తదుపరి ఇష్టమైన సినిమాను కనుగొనండి",
     gptSearchPlaceholder:
       "ఉదా: నేను సంతోషంగా ఉన్నాను, రొమాంటిక్ సినిమాలు, యాక్షన్ థ్రిల్లర్...",
@@ -163,9 +164,9 @@ const lang = {
     conversationHistory: "సంభాషణ చరిత్ర",
     clearChat: "క్లియర్",
     you: "మీరు",
-    ai: "NetflixGPT",
+    ai: "MovieFinder AI",
     chatTip:
-      "NetflixGPT మీ సంభాషణను గుర్తు పెట్టుకుంటుంది। మెరుగుపరచండి: 'పాతవి', 'కొత్తవి', మొదలైనవి.",
+      "MovieFinder AI మీ సంభాషణను గుర్తు పెట్టుకుంటుంది। మెరుగుపరచండి: 'పాతవి', 'కొత్తవి', మొదలైనవి.",
 
     // Login Page
     signIn: "సైన్ ఇన్",
@@ -173,7 +174,7 @@ const lang = {
     email: "ఇమెయిల్ చిరునామా",
     password: "పాస్‌వర్డ్",
     fullName: "పూర్తి పేరు",
-    newUser: "Netflix కు కొత్తవారా?",
+    newUser: "ఇక్కడ కొత్తవారా?",
     existingUser: "ఇప్పటికే నమోదు చేసుకున్నారా?",
     signUpNow: "ఇప్పుడు సైన్ అప్ చేయండి",
     signInNow: "ఇప్పుడు సైన్ ఇన్ చేయండి",
@@ -186,7 +187,7 @@ const lang = {
 
     // AI Search Page
     search: "சோதா",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle:
       "AI உடன் உங்கள் அடுத்த விருப்ப திரைப்படத்தை கண்டறியுங்கள்",
     gptSearchPlaceholder:
@@ -209,9 +210,9 @@ const lang = {
     conversationHistory: "உரையாடல் வரலாறு",
     clearChat: "அழி",
     you: "நீங்கள்",
-    ai: "NetflixGPT",
+    ai: "MovieFinder AI",
     chatTip:
-      "NetflixGPT உங்கள் உரையாடலை நினைவில் வைத்திருக்கிறது। மேம்படுத்துங்கள்: 'பழையவை', 'புதியவை', போன்றவை.",
+      "MovieFinder AI உங்கள் உரையாடலை நினைவில் வைத்திருக்கிறது। மேம்படுத்துங்கள்: 'பழையவை', 'புதியவை', போன்றவை.",
 
     // Login Page
     signIn: "உள்நுழைய",
@@ -219,7 +220,7 @@ const lang = {
     email: "மின்னஞ்சல் முகவரி",
     password: "கடவுச்சொல்",
     fullName: "முழு பெயர்",
-    newUser: "Netflix க்கு புதியவரா?",
+    newUser: "இங்கு புதியவரா?",
     existingUser: "ஏற்கனவே பதிவு செய்துள்ளீர்களா?",
     signUpNow: "இப்போது பதிவு செய்யுங்கள்",
     signInNow: "இப்போது உள்நுழையுங்கள்",
@@ -232,7 +233,7 @@ const lang = {
 
     // AI Search Page
     search: "تلاش کریں",
-    aiMovieSearch: "NetflixGPT",
+    aiMovieSearch: "MovieFinder AI",
     aiSearchSubtitle: "AI کے ساتھ اپنی اگلی پسندیدہ فلم دریافت کریں",
     gptSearchPlaceholder: "مثال: میں خوش ہوں، رومانوی فلمیں، ایکشن تھرلر...",
 
@@ -253,9 +254,9 @@ const lang = {
     conversationHistory: "گفتگو کی تاریخ",
     clearChat: "صاف کریں",
     you: "آپ",
-    ai: "NetflixGPT",
+    ai: "MovieFinder AI",
     chatTip:
-      "NetflixGPT آپ کی گفتگو یاد رکھتا ہے۔ بہتر بنائیں: 'پرانی'، 'نئی'، وغیرہ۔",
+      "MovieFinder AI آپ کی گفتگو یاد رکھتا ہے۔ بہتر بنائیں: 'پرانی'، 'نئی'، وغیرہ۔",
 
     // Login Page
     signIn: "سائن ان کریں",
@@ -263,7 +264,7 @@ const lang = {
     email: "ای میل ایڈریس",
     password: "پاس ورڈ",
     fullName: "پورا نام",
-    newUser: "Netflix پر نئے ہیں؟",
+    newUser: "یہاں نئے ہیں؟",
     existingUser: "پہلے سے رجسٹرڈ ہیں؟",
     signUpNow: "ابھی سائن اپ کریں",
     signInNow: "ابھی سائن ان کریں",

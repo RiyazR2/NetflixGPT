@@ -2,23 +2,28 @@ import React from "react";
 import GptSearchBar from "./GptSearchBar";
 import GptMoviesSuggestions from "./GptMoviesSuggestions";
 import ChatHistory from "./ChatHistory";
-import { BG_IMG_URL } from "../../utils/constant";
 import { useSelector } from "react-redux";
+import useBackgroundImage from "../../hooks/useBackgroundImage";
 
 const GptSearch = () => {
   const conversationActive = useSelector(
     (store) => store.gpt.conversationActive,
   );
+  const bgImage = useBackgroundImage();
 
   return (
     <div className="relative min-h-screen">
       {/* Background Image */}
       <div className="fixed inset-0 -z-10">
-        <img
-          className="h-full w-full object-cover"
-          src={BG_IMG_URL}
-          alt="Bg-img"
-        />
+        {bgImage ? (
+          <img
+            className="h-full w-full object-cover"
+            src={bgImage}
+            alt="Bg-img"
+          />
+        ) : (
+          <div className="h-full w-full bg-gradient-to-b from-gray-900 via-black to-black" />
+        )}
         {/* Dark Overlay to hide background behind content */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/85 to-black" />
       </div>
